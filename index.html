@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazli Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/fd.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <div class="col-loading">
+        <div class="line-logo-decoration"></div>
+        <div class="col-content-load">
+
+            <img class="chat-logo" src="assets/fd.png" width="100">
+            <div class="text-logo">
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="content-nav">
+            <img src="assets/logo.png" alt="" width="160">
+            <div class="link-nav">
+                <a href="#section1">Portfolio</a>
+                <a href="#tentangSaya">Tentang saya</a>
+                <a href="#project">Project</a>
+                <a href="#ulasan">Ulasan</a>
+            </div>
+            <i class='bx bx-menu-alt-right icon-menu'></i>
+            
+            <div class="link-nav-hp">
+                <img src="assets/white.png" width="150" style="margin-left: -5px;" alt="">
+                <a href="#section1">Portfolio</a>
+                <a href="#tentangSaya">Tentang saya</a>
+                <a href="#project">Project</a>
+                <a href="#ulasan">Ulasan</a>
+            </div>
+        </div>
+    </nav>
+    <section id="section1">
+        <div class="content1">
+            <div class="left-content1">
+                <div class="col-sosial-media">
+                    <a href="">Tiktok</a>
+                    <a href="">Instagram</a>
+                    <a href="">Facebook</a>
+                </div>
+                <div class="top-content1">
+                    <div class="arrow-top-content1"><i class='bx bx-right-arrow-alt'></i></div>
+                </div>
+                <div class="bottom-content1">
+                    <div class="arrow-bottom-content1"><i class='bx bx-right-arrow-alt'></i></div>
+
+                </div>
+                <div class="col-line">
+                    <div class="line-text">Ayo explore tanpa batas</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="right-content1">
+                <img class="right-content1-img" src="assets/logo.png" width="200px" alt="">
+                <div class="desc">Fazli Design menghadirkan karya yang tidak hanya menarik secara visual, tetapi
+                    juga
+                    fungsional, bermakna, penuh inovasi,
+                    dan mampu memberikan pengalaman yang menginspirasi.</div>
+                <div class="col-btn">
+                    <a class="wa-btn" href="https://wa.me/082139233954
+" target="_blank" style="display: flex;justify-content: center;align-items: center;gap: 10px;"> <button class="btn-wa"
+                            style="display: flex;justify-content: center;align-items: center;"><i
+                                class='bx bxl-whatsapp'></i> <span class="text-wa">WhatsApp</span></a>
+                    </button>
+                    <a href="#tentangSaya"><button class="btn-arrow"><i class='bx bx-down-arrow-alt'></i></button></a>
+                </div>
+                <div class="proyek-terakhir">Proyek terakhir</div>
+                <div class="col-proyek-terakhir">
+
+                    <img class="fade-img" src="assets/esport1.jpg" width="80" alt="">
+                    <img class="fade-img" src="assets/esport2.jpg" width="80" alt="">
+                    <img class="fade-img" src="assets/esport3.jpg" width="80" alt="">
+                    <img class="fade-img" src="assets/esport4.jpg" width="80" alt="">
+                    <img class="fade-img" src="assets/store3.jpg" width="80" alt="">
+                </div>
+                <style>
+                    .fade-img {
+                        opacity: 0;
+                        /* Awalnya gambar hilang */
+                        transform: translateX(50px);
+                        /* Geser ke kiri */
+                        transition: opacity 1s ease-out, transform 1s ease-out;
+                    }
+
+                    .fade-img.show {
+                        opacity: 1;
+                        /* Muncul setelah 3 detik */
+                        transform: translateX(0);
+                        /* Kembali ke posisi normal */
+                    }
+                </style>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const images = document.querySelectorAll(".fade-img");
+
+                        setTimeout(() => {
+                            images.forEach((img, index) => {
+                                setTimeout(() => {
+                                    img.classList.add("show"); // Tambahkan class untuk efek muncul
+                                }, index * 500); // Setiap gambar muncul bertahap
+                            });
+                        }, 3000); // Tunggu 3 detik sebelum mulai muncul
+                    });
+                </script>
+                <a href="#project" class="lihat-semua">Lihat semua</a>
+            </div>
+        </div>
+    </section>
+    <div id="tentangSaya"></div>
+    <section id="section2">
+        <div class="content2">
+            <div class="left2">
+                <img src="assets/Group 12.png" width="400" alt="">
+            </div>
+            <div class="right2">
+                <div class="box-tentang-saya">Tentang saya</div>
+                <div class="title">
+                    Fazli Design – Kreativitas Tanpa Batas, Inovasi Tanpa Henti
+                </div>
+                <div class="bio2">Saya adalah mahasiswa yang mempunyai kemampuan di
+                    bidang desain grafis</div>
+                <div class="box-identitas">Nama lengkap : Muhammad Fazli Ali Ikbar</div>
+                <div class="parent-identitas">
+                    <div class="box-identitas">Status pendidikan : S1 ilmu Komunikasi</div>
+                    <div class="box-identitas">Kota : Daerah istimewa jogjakarta</div>
+                </div>
+
+                <div class="column-sosmed">
+                    <a href="https://wa.me/082139233954" target="_blank">
+                        <div class="col-wa2"><i class='bx bxl-whatsapp'></i> <span class="text-wa">WhatsApp</span></div>
+                    </a>
+                    <a href="https://www.instagram.com/fazli.design?igsh=MWtndjUyczFvNG9kaA== " target="_blank">
+                        <div class="col-sosmed"><i class='bx bxl-instagram'></i></div>
+                    </a>
+                    <a href="https://www.facebook.com/mfazli.aliikbar?rdid=M6mcH6ofKAOa1rgZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15EYd7SSNF%2F#"
+                        target="_blank">
+                        <div class="col-sosmed"><i class='bx bxl-facebook'></i></div>
+                    </a>
+                    <a href="https://www.tiktok.com/@fazli.design" target="_blank"></a>
+                    <div class="col-sosmed"><i class='bx bxl-tiktok'></i></div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="content3">
+            <div class="title">Aplikasi Desain Grafis</div>
+            <div class="col-card">
+                <div class="card" data-aos="fade-up">
+                    <img src="assets/pixellab.png" width="50" alt="">
+                    <div class="text-pixellab">pixellab</div>
+                    <div class="bio-design">
+                        PixelLab adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit teks, logo,
+                        serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.imaginstudio.imagetools.pixellab&hl=id&pli=1"
+                        target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="50">
+                    <img src="assets/canvas.png" width="50" alt="">
+                    <div class="text-pixellab" style="color: #041E7C;">Canva</div>
+                    <div class="bio-design">
+                        Canva adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit teks, logo,
+                        serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.canva.editor" target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/photoshop.png" width="50" alt="">
+                    <div class="text-pixellab" style="color: #021E34;">Photoshop</div>
+                    <div class="bio-design">
+                        Photoshop adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit teks,
+                        logo, serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.adobe.psmobile&hl=id" target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="150">
+                    <img src="assets/ibispaint.png" width="50" alt="">
+                    <div class="text-pixellab" style="color: #015699;">Ibis Paint</div>
+                    <div class="bio-design">
+                        Ibis Paint adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit teks,
+                        logo, serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=jp.ne.ibis.ibispaintx.app&hl=id"
+                        target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/infinite.png" width="50" alt="">
+                    <div class="text-pixellab" style="color: #33B5E5;">Infinite Design</div>
+                    <div class="bio-design">
+                        Infinite Design adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit
+                        teks, logo, serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.brakefield.idfree&hl=id" target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="250">
+                    <img src="assets/picsart.png" width="50" alt="">
+                    <div class="text-pixellab" style="color: #8501C7;">PicsArt</div>
+                    <div class="bio-design">
+                        PicsArt adalah aplikasi desain grafis yang digunakan untuk membuat dan mengedit teks, logo,
+                        serta gambar dengan
+                        berbagai efek menarik.
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.picsart.studio" target="_blank">
+                        <div class="arrow-top-content1" id="box-icon"><i class='bx bx-right-arrow-alt'></i></div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="project"></div>
+    <section id="section4">
+        <div class="content4">
+            <div class="title">Proyek saya</div>
+            <div class="desc-proyek">Ini adalah hasil karya desain yang saya buat</div>
+            <div class="col-filter">
+                <button class="box-filter active" data-filter="E-sports">E-sports</button>
+                <button class="box-filter" data-filter="Store">Store</button>
+                <button class="box-filter" data-filter="Poster Fast Tour">Poster Fast Tour</button>
+                <button class="box-filter" data-filter="Event Turnament">Event Turnament</button>
+                <button class="box-filter" data-filter="Feed Instagram">Feed Instagram</button>
+                <button class="box-filter" data-filter="Logo">Logo</button>
+                <button class="box-filter" data-filter="UMKM">UMKM</button>
+                <button class="box-filter" data-filter="Jersey">Jersey</button>
+            </div>
+
+            <div class="col-card-proyek">
+                <div id="no-data"
+                    style="display: none; width: 100%;height: 200px;display: flex;justify-content: center;align-items: center;">
+                    <span>Tidak ada data</span>
+                </div>
+                <div class="card-proyek" data-filter="E-sports">
+                    <img src="assets/esport1.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain E-sports</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+
+                <div class="card-proyek" data-filter="E-sports">
+                    <img src="assets/esport2.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain E-sports</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="E-sports">
+                    <img src="assets/esport3.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain E-sports</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="E-sports">
+                    <img src="assets/esport4.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain E-sports</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+
+
+
+                <div class="card-proyek" data-filter="Event Turnament">
+                    <img src="assets/turnament1.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Turnamen</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Event Turnament">
+                    <img src="assets/turnament2.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Turnamen</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Event Turnament">
+                    <img src="assets/turnament3.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Turnamen</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Event Turnament">
+                    <img src="assets/turnament4.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Turnamen</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Event Turnament">
+                    <img src="assets/turnament5.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Turnamen</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+
+
+
+                <div class="card-proyek" data-filter="Store">
+                    <img src="assets/store1.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Store</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+
+                <div class="card-proyek" data-filter="Store">
+                    <img src="assets/store2.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Store</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Store">
+                    <img src="assets/store3.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Store</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Store">
+                    <img src="assets/store4.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Store</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="Store">
+                    <img src="assets/store5.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain Store</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+
+                <div class="card-proyek" data-filter="UMKM">
+                    <img src="assets/umkm1.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain UMKM</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="UMKM">
+                    <img src="assets/umkm2.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain UMKM</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="UMKM">
+                    <img src="assets/umkm3.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain UMKM</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+                <div class="card-proyek" data-filter="UMKM">
+                    <img src="assets/umkm4.jpg" width="200" alt="">
+                    <div class="title-proyek">Desain UMKM</div>
+                    <a href="https://wa.me/082139233954" target="_blank"> <button class="btn-pesan-desain">Pesan
+                            Desain</button></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div id="ulasan"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let defaultFilter = "E-sports"; // Filter default yang ingin ditampilkan pertama kali
+
+            let hasVisible = false;
+            document.querySelectorAll('.card-proyek').forEach(card => {
+                if (card.getAttribute('data-filter') === defaultFilter) {
+                    card.style.display = "block";
+                    hasVisible = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Set tombol filter "esport" aktif
+            document.querySelectorAll('.box-filter').forEach(button => {
+                if (button.getAttribute('data-filter') === defaultFilter) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            // Tampilkan teks "Tidak ada data" jika tidak ada kartu yang cocok
+            document.getElementById('no-data').style.display = hasVisible ? "none" : "flex";
+
+            // Refresh AOS setelah perubahan tampilan
+            setTimeout(() => AOS.refresh(), 100);
+        });
+
+        // Event klik untuk filter
+        document.querySelectorAll('.box-filter').forEach(button => {
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.box-filter').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                let filterValue = this.getAttribute('data-filter');
+                let hasVisible = false;
+
+                document.querySelectorAll('.card-proyek').forEach(card => {
+                    if (filterValue === "all" || card.getAttribute('data-filter') === filterValue) {
+                        card.style.display = "block";
+                        hasVisible = true;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+
+                document.getElementById('no-data').style.display = hasVisible ? "none" : "flex";
+
+                // Refresh AOS setelah perubahan tampilan
+                setTimeout(() => AOS.refresh(), 100);
+            });
+        });
+
+
+
+    </script>
+    <section id="section5">
+        <div class="content5">
+            <div class="title">Ulasan Client</div>
+            <div class="desc-proyek">Inilah pendapat klien tentang hasil karya saya</div>
+            <div class="column-card">
+                <div class="card-aside" data-aos="fade-up">
+                    <img src="assets/user1-128x128.jpg" class="profile" alt="profile">
+                    <div class="name-komentar">Yosua Alexa</div>
+                    <div class="column-rating">
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                    </div>
+                    <p class="content-komentar">
+                        “Desain yang dibuat benar-benar profesional dan sesuai dengan branding bisnis saya”
+                    </p>
+                    <div class="column-aksi">
+                        <i class='bx bx-heart' style='color:#293845'></i>
+                        <i class='bx bx-message-rounded-dots' style='color:#293845'></i>
+                        <i class='bx bx-share' style='color:#293845'></i>
+                    </div>
+                </div>
+                <div class="card-aside" data-aos="fade-up" data-aos-delay="50">
+                    <img src="assets/user3-128x128.jpg" class="profile" alt="profile">
+                    <div class="name-komentar">Yosua Alexa</div>
+                    <div class="column-rating">
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                    </div>
+                    <p class="content-komentar">
+                        "Karya desainnya sangat profesional dan benar-benar mencerminkan identitas bisnis saya"
+                    </p>
+                    <div class="column-aksi">
+                        <i class='bx bx-heart' style='color:#293845'></i>
+                        <i class='bx bx-message-rounded-dots' style='color:#293845'></i>
+                        <i class='bx bx-share' style='color:#293845'></i>
+                    </div>
+                </div>
+                <div class="card-aside" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/user1-128x128.jpg" class="profile" alt="profile">
+                    <div class="name-komentar">Yosua Alexa</div>
+                    <div class="column-rating">
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                    </div>
+                    <p class="content-komentar">
+                        "Hasil desainnya luar biasa, selaras dengan branding bisnis saya secara sempurna."
+                    </p>
+                    <div class="column-aksi">
+                        <i class='bx bx-heart' style='color:#293845'></i>
+                        <i class='bx bx-message-rounded-dots' style='color:#293845'></i>
+                        <i class='bx bx-share' style='color:#293845'></i>
+                    </div>
+                </div>
+                <div class="card-aside" data-aos="fade-up" data-aos-delay="150">
+                    <img src="assets/user3-128x128.jpg" class="profile" alt="profile">
+                    <div class="name-komentar">Yosua Alexa</div>
+                    <div class="column-rating">
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                    </div>
+                    <p class="content-komentar">
+                        "Desain yang dihasilkan begitu profesional dan mampu memperkuat citra bisnis saya."
+                    </p>
+                    <div class="column-aksi">
+                        <i class='bx bx-heart' style='color:#293845'></i>
+                        <i class='bx bx-message-rounded-dots' style='color:#293845'></i>
+                        <i class='bx bx-share' style='color:#293845'></i>
+                    </div>
+                </div>
+                <div class="card-aside" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/user1-128x128.jpg" class="profile" alt="profile">
+                    <div class="name-komentar">Yosua Alexa</div>
+                    <div class="column-rating">
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                        <i class='bx bxs-star' style='color:#b28439'></i>
+                    </div>
+                    <p class="content-komentar">
+                        "Sangat puas dengan desainnya, terlihat elegan dan sesuai dengan karakter brand saya."
+                    </p>
+                    <div class="column-aksi">
+                        <i class='bx bx-heart' style='color:#293845'></i>
+                        <i class='bx bx-message-rounded-dots' style='color:#293845'></i>
+                        <i class='bx bx-share' style='color:#293845'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="content-footer">
+            <div class="left-footer">
+                <img src="assets/white.png" width="300" alt="">
+                <div class="desc-footer">Fazli Design adalah studio kreatif yang menghadirkan desain inovatif,
+                    profesional, dan sesuai dengan identitas brand
+                    Anda. Dengan perpaduan estetika dan fungsionalitas.</div>
+            </div>
+            <div class="center-footer">
+                <h4 class="title-feature">Fitur</h4>
+                <a href="#section1">Portfolio</a>
+                <a href="#tentangSaya">Tentang saya</a>
+                <a href="#project">Project</a>
+                <a href="#ulasan">Ulasan</a>
+            </div>
+            <div class="right-footer">
+                <h4 class="title-feature">Kontak</h4>
+                <div class="box-contact"><i class='bx bxl-whatsapp wa-footer' style='color:#ffffff'></i> +62
+                    821-3923-3954</div>
+                <div class="box-contact"><i class='bx bx-envelope wa-footer' style='color:#ffffff'></i>
+                    fazlidesign@gmail.com</div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
