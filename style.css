@@ -1164,7 +1164,9 @@ footer {
         margin-left: 100px;
 
     }
-
+button{
+    border: none;
+}
     .link-nav-hp {
         width: 75%;
         height: 100vh;
