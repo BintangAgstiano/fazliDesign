@@ -1,4 +1,10 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("img").forEach(img => {
+        img.setAttribute("loading", "lazy");
+    });
     const images = document.querySelectorAll("img");
 
     images.forEach(img => {
@@ -12,9 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function resizeImage(img) {
         const maxWidth = 1800; // Maksimal lebar gambar
 
-        // Cek apakah gambar perlu di-resize
         if (img.naturalWidth <= maxWidth) {
-            console.log(`Gambar tidak diubah: ${img.naturalWidth} x ${img.naturalHeight}`);
             return;
         }
 
@@ -30,12 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-        console.log(`Gambar Asli: ${img.naturalWidth} x ${img.naturalHeight}`);
 
         // Gunakan toBlob() dengan kualitas lebih rendah (0.2)
         canvas.toBlob((blob) => {
-            console.log(`Gambar Setelah Resize: ${newWidth} x ${newHeight}`);
-            console.log(`Ukuran File Baru: ${(blob.size / 1024).toFixed(2)} KB`);
 
             const newSrc = URL.createObjectURL(blob);
             img.src = newSrc;
