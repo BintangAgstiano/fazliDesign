@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 img.onload = () => resizeImage(img);
             }
         });
-    }, 3000);
+    }, 1000);
 
     function resizeImage(img) {
         const maxWidth = 1800; // Maksimal lebar gambar
