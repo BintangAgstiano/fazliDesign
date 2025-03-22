@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("img").forEach(img => {
         img.setAttribute("loading", "lazy");
     });
-    const images = document.querySelectorAll("img");
-
-    images.forEach(img => {
-        if (img.complete) {
-            resizeImage(img);
-        } else {
-            img.onload = () => resizeImage(img);
-        }
-    });
+    setTimeout(() => {
+        document.querySelectorAll("img").forEach(img => {
+            if (img.complete) {
+                resizeImage(img);
+            } else {
+                img.onload = () => resizeImage(img);
+            }
+        });
+    }, 100);
 
     function resizeImage(img) {
         const maxWidth = 1800; // Maksimal lebar gambar
