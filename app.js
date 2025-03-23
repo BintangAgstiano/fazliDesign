@@ -99,7 +99,11 @@ const folderIds = {
 console.log(document.getElementById('no-data'));
 async function fetchImagesFromDrive(category) {
     const container = document.querySelector(".col-card-proyek");
-    container.innerHTML = ""; // Bersihkan sebelum update
+    const noDataElement = document.getElementById('no-data');
+
+    // Kosongkan container sebelum memuat data baru
+    container.innerHTML = "";
+    noDataElement.style.display = "none"; // Sembunyikan pesan "Tidak ada data" saat mengambil data baru
 
     const folderId = folderIds[category];
     if (!folderId) return;
@@ -108,18 +112,19 @@ async function fetchImagesFromDrive(category) {
     const response = await fetch(url);
     const data = await response.json();
 
+    // Jika tidak ada file, tampilkan pesan "Tidak ada data"
     if (!data.files || data.files.length === 0) {
-        const noDataElement = document.getElementById('no-data');
         noDataElement.style.display = "flex";
         noDataElement.scrollIntoView({ behavior: "smooth", block: "center" });
-
         return;
     }
+
+    // Jika ada data, pastikan "Tidak ada data" tetap tersembunyi
+    noDataElement.style.display = "none";
+
     data.files.forEach(file => {
-        // const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200'+in+parents&key=${apiKey}&fields=files(id,name,thumbnailLink)`;
         const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200`;
 
-        // Jika kategori adalah "feed", gunakan style khusus
         if (category === "feed") {
             container.innerHTML += `
                 <div class="card-proyek" style="padding: 0px; box-shadow: none;" data-filter="feed">
@@ -139,6 +144,7 @@ async function fetchImagesFromDrive(category) {
         }
     });
 }
+
 
 // Load kategori pertama saat halaman dibuka
 fetchImagesFromDrive("E-sports");
