@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("img").forEach(img => {
         img.setAttribute("loading", "lazy");
@@ -78,3 +82,70 @@ iconMenu.addEventListener('click', function () {
         isClik = true
     }
 })
+
+const apiKey = "AIzaSyB7UUIDohzIfThHuZpL3Zja1Yx3j6EU62Y"; // Ganti dengan API Key yang kamu buat
+const folderIds = {
+    "E-sports": "1P9b-OfKoOQxfpjNtEFwd1tRISYF6gQB9",
+    "Store": "1PSGB9IgJjO-vNQf0n3VpQT-bBKK7Wz5B",
+    "poster": "1dTKFJHUitiTyv3FCLMidzZK1iA3osrlB",
+    "Event Turnament": "1PEfcI9i5oCofhSyyb1JXM-P9YpFAkvZn",
+    "feed": "1PtGVEeUGLz1sKkbOXvnAdZmjFkg_vEuE",
+    // "Logo": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "UMKM": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "Jersey": "1Sl9li__fX5MhFAFbHIFx0oRXxMp2zQvt",
+    // "Gaming": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+
+};
+
+async function fetchImagesFromDrive(category) {
+    const container = document.querySelector(".col-card-proyek");
+    container.innerHTML = ""; // Bersihkan sebelum update
+
+    const folderId = folderIds[category];
+    if (!folderId) return;
+
+    const url = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name)`;
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (data.files.length === 0) {
+        document.getElementById("no-data").style.display = "flex";
+        alert('pok');
+        return;
+    }
+
+    data.files.forEach(file => {
+        // const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200'+in+parents&key=${apiKey}&fields=files(id,name,thumbnailLink)`;
+        const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200`;
+
+        // Jika kategori adalah "feed", gunakan style khusus
+        if (category === "feed") {
+            container.innerHTML += `
+                <div class="card-proyek" style="padding: 0px; box-shadow: none;" data-filter="feed">
+                    <img src="${imgURL}" style="width: 100%;" alt="">
+                </div>
+            `;
+        } else {
+            container.innerHTML += `
+                <div class="card-proyek" data-filter="${category}">
+                    <img src="${imgURL}" width="200" alt="">
+                    <div class="title-proyek">Desain ${category}</div>
+                    <a href="https://wa.me/082139233954" target="_blank">
+                        <button class="btn-pesan-desain">Pesan Desain</button>
+                    </a>
+                </div>
+            `;
+        }
+    });
+}
+
+// Load kategori pertama saat halaman dibuka
+fetchImagesFromDrive("E-sports");
+
+// Tambahkan event listener untuk tombol filter
+document.querySelectorAll(".box-filter").forEach(button => {
+    button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter");
+        fetchImagesFromDrive(filter);
+    });
+});
