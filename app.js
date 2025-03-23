@@ -90,10 +90,10 @@ const folderIds = {
     "poster": "1dTKFJHUitiTyv3FCLMidzZK1iA3osrlB",
     "Event Turnament": "1PEfcI9i5oCofhSyyb1JXM-P9YpFAkvZn",
     "feed": "1PtGVEeUGLz1sKkbOXvnAdZmjFkg_vEuE",
-    // "Logo": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "Logo": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
     "UMKM": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
     "Jersey": "1Sl9li__fX5MhFAFbHIFx0oRXxMp2zQvt",
-    // "Gaming": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "Gaming": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
 
 };
 
