@@ -89,11 +89,11 @@ const folderIds = {
     "Store": "1PSGB9IgJjO-vNQf0n3VpQT-bBKK7Wz5B",
     "poster": "1dTKFJHUitiTyv3FCLMidzZK1iA3osrlB",
     "Event Turnament": "1PEfcI9i5oCofhSyyb1JXM-P9YpFAkvZn",
-    "feed": "1PtGVEeUGLz1sKkbOXvnAdZmjFkg_vEuE",
-    "Logo": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "feed": "1PtGVEeUGLz1sKkbOXvnAdZmjFkg_vEuE?hl=ID",
+    "Logo": "1iI23gUkKXvMQVF6QIKb-VgZh3kAHVswa?hl=ID",
     "UMKM": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
     "Jersey": "1Sl9li__fX5MhFAFbHIFx0oRXxMp2zQvt",
-    "Gaming": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
+    "Gaming": "1iH0KzzIlUXgj83YU8BJzWWiodfN1rToV?hl=ID",
 
 };
 
@@ -108,12 +108,12 @@ async function fetchImagesFromDrive(category) {
     const response = await fetch(url);
     const data = await response.json();
 
-    if (data.files.length === 0) {
-        document.getElementById("no-data").style.display = "flex";
-        alert('pok');
+    if (!data.files || data.files.length === 0) {
+        console.log("Tidak ada data ditemukan.");
+        // document.getElementById('no-data').style.display = hasVisible ? "none" : "flex";
+        alert("pok"); // Ini seharusnya muncul jika tidak ada data
         return;
     }
-
     data.files.forEach(file => {
         // const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200'+in+parents&key=${apiKey}&fields=files(id,name,thumbnailLink)`;
         const imgURL = `https://drive.google.com/thumbnail?id=${file.id}&sz=w1200`;
