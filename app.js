@@ -96,7 +96,7 @@ const folderIds = {
     "Gaming": "1iH0KzzIlUXgj83YU8BJzWWiodfN1rToV?hl=ID",
 
 };
-
+console.log(document.getElementById('no-data'));
 async function fetchImagesFromDrive(category) {
     const container = document.querySelector(".col-card-proyek");
     container.innerHTML = ""; // Bersihkan sebelum update
@@ -109,9 +109,10 @@ async function fetchImagesFromDrive(category) {
     const data = await response.json();
 
     if (!data.files || data.files.length === 0) {
-        console.log("Tidak ada data ditemukan.");
-        // document.getElementById('no-data').style.display = hasVisible ? "none" : "flex";
-        alert("pok"); // Ini seharusnya muncul jika tidak ada data
+        const noDataElement = document.getElementById('no-data');
+        noDataElement.style.display = "flex";
+        noDataElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
         return;
     }
     data.files.forEach(file => {

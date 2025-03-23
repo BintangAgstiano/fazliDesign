@@ -277,15 +277,6 @@
         document.addEventListener("DOMContentLoaded", function () {
             let defaultFilter = "E-sports"; // Filter default yang ingin ditampilkan pertama kali
 
-            let hasVisible = false;
-            document.querySelectorAll('.card-proyek').forEach(card => {
-                if (card.getAttribute('data-filter') === defaultFilter) {
-                    card.style.display = "block";
-                    hasVisible = true;
-                } else {
-                    card.style.display = "none";
-                }
-            });
 
             // Set tombol filter "esport" aktif
             document.querySelectorAll('.box-filter').forEach(button => {
@@ -309,20 +300,7 @@
                 document.querySelectorAll('.box-filter').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
-                let filterValue = this.getAttribute('data-filter');
-                let hasVisible = false;
-
-                document.querySelectorAll('.card-proyek').forEach(card => {
-                    if (filterValue === "all" || card.getAttribute('data-filter') === filterValue) {
-                        card.style.display = "block";
-                        hasVisible = true;
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-
-                document.getElementById('no-data').style.display = hasVisible ? "none" : "flex";
-
+    
                 // Refresh AOS setelah perubahan tampilan
                 setTimeout(() => AOS.refresh(), 100);
             });
