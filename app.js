@@ -94,6 +94,7 @@ const folderIds = {
     "UMKM": "1Pm7xA6YwafGerIIVma_wK_H-5lPR6XTP",
     "Jersey": "1Sl9li__fX5MhFAFbHIFx0oRXxMp2zQvt",
     "Gaming": "1iH0KzzIlUXgj83YU8BJzWWiodfN1rToV?hl=ID",
+    "Sosmed": "1BbJZqQsc3Ks_m2ALg8BrIdq0H-tnf0c2",
 
 };
 console.log(document.getElementById('no-data'));
